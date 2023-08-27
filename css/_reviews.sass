@@ -1,0 +1,68 @@
+.reviews
+    &__background
+        width: 100%
+        position: absolute
+        z-index: -1
+        margin-top: 0
+
+    &__title
+        font-size: 2.8rem
+        font-style: normal
+        font-weight: 700
+        line-height: 150%
+        text-transform: uppercase
+    &__title-div
+        max-width: 132rem
+        display: flex
+        margin-top: 8rem
+        margin-bottom: 6rem
+        margin-right: auto
+        margin-left: auto
+        img
+            height: 3rem
+            &:hover
+                cursor: pointer
+    &__border
+        @include title-border
+        position: absolute
+        margin-top: 5rem
+    &__btns
+        display: flex
+        max-width: 132rem
+        margin: 0 auto
+        flex-direction: row
+        gap: 2.5rem
+    &__btn-1
+        @include main-button
+    &__btn-2
+        @include main-button
+        background: #E6E6E6
+        color: $black-color
+        width: 20rem
+        &:hover
+            background: $white-color
+            border: #c2c2c2 solid .2rem
+            color: $black-color
+
+.reviews__div
+    max-width: 133rem
+    height: 25rem
+    margin: 0 auto
+    position: relative
+    overflow: hidden
+    margin-bottom: 3rem
+    box-shadow: 3px 3px 10px 0px rgba(33, 33, 33, 0.15)
+.slide
+    position: absolute
+    top: 0
+    display: flex
+    gap: 3rem
+    align-items: center
+    justify-content: center
+    transition: transform 1s
+
+.reviews__review
+    @include review
+
+.arrows-div
+    margin-left: auto

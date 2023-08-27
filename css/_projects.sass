@@ -1,0 +1,138 @@
+.projects-background
+    position: relative
+    background: #F7F7F7
+    width: 100%
+    height: 74rem
+    margin-top: 23rem
+    display: flex
+    justify-content: center
+
+.projects
+    position: absolute
+    &__title
+        margin-top: 8rem
+        text-align: center
+        color: $black-color
+        font-size: 2.8rem
+        font-style: normal
+        font-weight: 700
+        line-height: 150%
+        text-transform: uppercase
+        margin-bottom: 1rem
+    &__text-div
+        text-align: center
+    &__border
+        @include title-border
+        margin-bottom: 2.5rem
+    &__text
+        display: flex
+        text-align: center
+        justify-content: center
+        color: $black-color
+        font-size: 1.6rem
+        font-style: normal
+        font-weight: 400
+        line-height: 120%
+        margin-bottom: 5rem
+
+        // карточки
+.cards-div
+    display: flex
+    flex-wrap: wrap
+.cards
+    width: 30rem
+    height: 43rem
+    margin-right: 3rem
+    perspective: 150rem
+    position: relative
+    &__side
+        height: 43rem
+        transition: .8s all ease-out
+        color: white
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        backface-visibility: hidden
+        &_front
+            background: white
+            box-shadow: -1px 1px 5px 0px rgba(90, 90, 90, 0.5)
+            img
+                width: 100%
+                margin-bottom: 2.5rem
+            h4
+                color: $black-color
+                text-align: center
+                font-size: 1.6rem
+                font-style: normal
+                font-weight: 700
+                line-height: 120%
+                margin-bottom: 1rem
+            p
+                color: $black-color
+                text-align: center
+                font-size: 1.4rem
+                font-style: normal
+                font-weight: 300
+                line-height: 120%
+                text-transform: lowercase
+        &_back
+            background: white
+            box-shadow: -1px 1px 5px 0px rgba(90, 90, 90, 0.5)
+            transform: rotateY(180deg)
+            img
+                position: absolute
+                display: flex
+                margin-left: 13.7rem
+            p
+                color: $black-color
+                text-align: center
+                font-size: 1.6rem
+                font-style: normal
+                font-weight: 700
+                line-height: 120%
+                margin-top: 7.5rem
+                margin-bottom: 8rem
+    &:hover &__side_front
+        transform: rotateY(180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+        cursor: pointer
+
+// уголки
+.corners__1-blue
+    @include corners_blue
+    top: 1.5rem
+    right: 1.5rem
+.corners__2-blue
+    @include corners_blue
+    top: 3.2rem
+    right: -.2rem
+    transform: rotate(90deg)
+.corners__3-blue
+    @include corners_blue
+    top: 1.5rem
+    left: 1.5rem
+.corners__4-blue
+    @include corners_blue
+    top: 3.2rem
+    left: -.2rem
+    transform: rotate(90deg)
+.corners__5-blue
+    @include corners_blue
+    bottom: 1.5rem
+    right: 1.5rem
+.corners__6-blue
+    @include corners_blue
+    bottom: 3.2rem
+    right: -.2rem
+    transform: rotate(90deg)
+.corners__7-blue
+    @include corners_blue
+    bottom: 1.5rem
+    left: 1.5rem
+.corners__8-blue
+    @include corners_blue
+    bottom: 3.2rem
+    left: -.2rem
+    transform: rotate(90deg)
